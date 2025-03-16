@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CDD/LAB02/LAB02.srcs/sources_1/new/uart_rx.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rx
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CDD/LAB02/LAB02.srcs/sim_1/new/uart_rx_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rx_TB
