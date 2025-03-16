@@ -1,0 +1,9 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+D:/CDD/LAB02/LAB02.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+D:/CDD/LAB02/LAB02.srcs/sim_1/new/uart_rx_TB.v,1742122877,verilog,,,,uart_rx_TB,,,,,,,,
+D:/CDD/LAB02/LAB02.srcs/sim_1/new/uart_tx_TB.v,1741354294,verilog,,,,uart_tx_TB,,,,,,,,
+D:/CDD/LAB02/LAB02.srcs/sources_1/new/uart_rx.v,1742122731,verilog,,D:/CDD/LAB02/LAB02.srcs/sources_1/new/uart_tx.v,,uart_rx,,,,,,,,
+D:/CDD/LAB02/LAB02.srcs/sources_1/new/uart_tx.v,1741354210,verilog,,D:/CDD/LAB02/LAB02.srcs/sim_1/new/uart_rx_TB.v,,uart_tx,,,,,,,,

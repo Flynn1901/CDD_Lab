@@ -1,0 +1,102 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Test vector r_iA: 0,r_iB: 0,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 0,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 1,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 1,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 2,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 2,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 3,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 3,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 4,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 4,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 5,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 5,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 6,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 6,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 7,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 7,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 8,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 8,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB: 9,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB: 9,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB:10,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB:10,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB:11,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB:11,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB:12,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB:12,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB:13,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB:13,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB:14,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB:14,r_iCarry:1 passed
+Test vector r_iA: 0,r_iB:15,r_iCarry:0 passed
+Test vector r_iA: 0,r_iB:15,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 0,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 0,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 1,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 1,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 2,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 2,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 3,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 3,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 4,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 4,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 5,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 5,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 6,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 6,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 7,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 7,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 8,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 8,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB: 9,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB: 9,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB:10,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB:10,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB:11,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB:11,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB:12,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB:12,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB:13,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB:13,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB:14,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB:14,r_iCarry:1 passed
+Test vector r_iA: 1,r_iB:15,r_iCarry:0 passed
+Test vector r_iA: 1,r_iB:15,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 0,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 0,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 1,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 1,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 2,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 2,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 3,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 3,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 4,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 4,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 5,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 5,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 6,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 6,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 7,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 7,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 8,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 8,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB: 9,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB: 9,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB:10,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB:10,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB:11,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB:11,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB:12,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB:12,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB:13,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB:13,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB:14,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB:14,r_iCarry:1 passed
+Test vector r_iA: 2,r_iB:15,r_iCarry:0 passed
+Test vector r_iA: 2,r_iB:15,r_iCarry:1 passed
+Test vector r_iA: 3,r_iB: 0,r_iCarry:0 passed
+Test vector r_iA: 3,r_iB: 0,r_iCarry:1 passed
+Test vector r_iA: 3,r_iB: 1,r_iCarry:0 passed
+Test vector r_iA: 3,r_iB: 1,r_iCarry:1 passed

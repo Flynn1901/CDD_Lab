@@ -1,0 +1,9 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Now rBit is still smaller than NBYTES which is 0!
+Now rBit is still smaller than NBYTES which is 1!
+Now rBit is still smaller than NBYTES which is 2!
+Now rBit is still smaller than NBYTES which is 3!
+Now rBit is still smaller than NBYTES which is 4!
+Reach the boundary
+$stop called at time : 3220 ns : File "D:/PROJECT/XILINX/CDD/Lab2/lab2/lab2.srcs/sim_1/new/uart_top_TB.v" Line 180

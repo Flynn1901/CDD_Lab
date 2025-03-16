@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Feb 20 15:03:52 2025
+# Process ID: 22360
+# Current directory: D:/PROJECT/XILINX/CDD/Lab1/Lab1/Lab1.runs/synth_1
+# Command line: vivado.exe -log wrap_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrap_adder.tcl
+# Log file: D:/PROJECT/XILINX/CDD/Lab1/Lab1/Lab1.runs/synth_1/wrap_adder.vds
+# Journal file: D:/PROJECT/XILINX/CDD/Lab1/Lab1/Lab1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source wrap_adder.tcl -notrace

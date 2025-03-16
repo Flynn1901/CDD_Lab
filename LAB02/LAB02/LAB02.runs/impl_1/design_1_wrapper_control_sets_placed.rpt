@@ -1,0 +1,88 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sun Mar 16 17:38:21 2025
+| Host         : DESKTOP-3T9PBIE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    10 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              61 |           22 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              47 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+--------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |                            Enable Signal                           |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+--------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+| ~iClk_IBUF_BUFG |                                                                    |                                            |                1 |              1 |         1.00 |
+|  iClk_IBUF_BUFG |                                                                    |                                            |                2 |              3 |         1.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rCnt                                    | design_1_i/Debounce_Switch_0/inst/o_Switch |                1 |              4 |         4.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/wTxData_Next               | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rTxByte[7]_i_1_n_0                      | design_1_i/Debounce_Switch_0/inst/o_Switch |                3 |              8 |         2.67 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/rRxData_Current[7]_i_1_n_0 | design_1_i/Debounce_Switch_0/inst/o_Switch |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/rBuffer_0                  |                                            |                2 |             16 |         8.00 |
+|  iClk_IBUF_BUFG |                                                                    | design_1_i/Debounce_Switch_0/inst/p_0_in   |                5 |             18 |         3.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/rBuffer_0                  | design_1_i/Debounce_Switch_0/inst/o_Switch |                5 |             19 |         3.80 |
+|  iClk_IBUF_BUFG |                                                                    | design_1_i/Debounce_Switch_0/inst/o_Switch |               17 |             43 |         2.53 |
++-----------------+--------------------------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+
+
