@@ -1,0 +1,157 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Mar 17 12:11:23 2025
+| Host         : DESKTOP-3T9PBIE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    79 |
+|    Minimum number of control sets                        |     4 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |    75 |
+| Unused register locations in slices containing registers |   262 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    79 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    73 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              22 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1637 |          427 |
+| Yes          | No                    | No                     |             504 |           81 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1575 |          318 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |                                Enable Signal                                |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/wTxData_Next                        | design_1_i/Debounce_Switch_0/inst/o_Switch_repN                    |                1 |              1 |         1.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/wTxData_Next                        | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_9                  |                3 |              7 |         2.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/E[0]                                | design_1_i/Debounce_Switch_0/inst/o_Switch_repN                    |                2 |              7 |         3.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/wRxData_Next                        | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_9                  |                2 |              8 |         4.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/FSM_sequential_rFSM_reg[2]_0        | design_1_i/uart_top_0/inst/UART_TX_INST/FSM_sequential_rFSM_reg[2] |                5 |              8 |         1.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rTxByte                                          | design_1_i/Debounce_Switch_0/inst/o_Switch_repN                    |                3 |              8 |         2.67 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_13                 |                8 |             17 |         2.12 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_4                  |                3 |             17 |         5.67 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_13                 |                4 |             17 |         4.25 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/p_0_in                           |                5 |             18 |         3.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_9                  |                4 |             18 |         4.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_9                  |                3 |             18 |         6.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_10                 |                3 |             18 |         6.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_4                  |                3 |             19 |         6.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_4                  |                4 |             20 |         5.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_9                  |                6 |             21 |         3.50 |
+|  iClk_IBUF_BUFG |                                                                             |                                                                    |               14 |             22 |         1.57 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_3                  |                3 |             22 |         7.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_3                  |                4 |             22 |         5.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_3                  |                3 |             22 |         7.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_10                 |                3 |             23 |         7.67 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_14                 |                5 |             23 |         4.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_14                 |                8 |             24 |         3.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_14                 |                5 |             24 |         4.80 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_10                 |                4 |             25 |         6.25 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_17                 |                6 |             25 |         4.17 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_16                 |                5 |             27 |         5.40 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_17                 |                9 |             27 |         3.00 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_13                 |                8 |             28 |         3.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_17                 |                7 |             31 |         4.43 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_6                  |                6 |             31 |         5.17 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_18                 |                6 |             31 |         5.17 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_15                 |                7 |             32 |         4.57 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_13                 |                9 |             32 |         3.56 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_6                  |                6 |             32 |         5.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_6                  |                6 |             32 |         5.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_7                  |                5 |             33 |         6.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_5                  |                5 |             33 |         6.60 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_8                  |                6 |             33 |         5.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_7                  |                5 |             34 |         6.80 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_8                  |                5 |             34 |         6.80 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_16                 |                5 |             34 |         6.80 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_7                  |                6 |             35 |         5.83 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_15                 |                6 |             35 |         5.83 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_8                  |                6 |             35 |         5.83 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_5                  |                8 |             35 |         4.38 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_15                 |                6 |             35 |         5.83 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_16                 |                6 |             36 |         6.00 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_5                  |                5 |             36 |         7.20 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_2                  |                6 |             37 |         6.17 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_18                 |                9 |             38 |         4.22 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_18                 |               12 |             38 |         3.17 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_12                 |                8 |             39 |         4.88 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_2                  |                6 |             39 |         6.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_11                 |                9 |             39 |         4.33 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_2                  |                6 |             39 |         6.50 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_12                 |                9 |             40 |         4.44 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_17                 |               14 |             43 |         3.07 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rA                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_11                 |                9 |             43 |         4.78 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/rB                                               | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_11                 |                6 |             43 |         7.17 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_RX_INST/FSM_onehot_rFSM_Current_reg[4]_0[0] | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_12                 |                8 |             43 |         5.38 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_14                 |               14 |             46 |         3.29 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_4                  |               12 |             56 |         4.67 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_6                  |               16 |             59 |         3.69 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_10                 |               17 |             65 |         3.82 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_7                  |               18 |             68 |         3.78 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_8                  |               19 |             69 |         3.63 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_16                 |               19 |             73 |         3.84 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_9                  |               26 |             78 |         3.00 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_11                 |               20 |             80 |         4.00 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_18                 |               24 |             84 |         3.50 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_15                 |               23 |             85 |         3.70 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_12                 |               31 |             86 |         2.77 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_5                  |               26 |            100 |         3.85 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_2                  |               29 |            109 |         3.76 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_3                  |               31 |            150 |         4.84 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN_1                  |               41 |            164 |         4.00 |
+|  iClk_IBUF_BUFG |                                                                             | design_1_i/Debounce_Switch_0/inst/o_Switch_repN                    |               34 |            176 |         5.18 |
+|  iClk_IBUF_BUFG | design_1_i/uart_top_0/inst/UART_TX_INST/FSM_sequential_rFSM_reg[2]_0        |                                                                    |               81 |            504 |         6.22 |
++-----------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
+
+
