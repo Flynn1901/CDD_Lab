@@ -37,8 +37,9 @@ module uart_top #(
   reg [OPERAND_WIDTH-1:0] rA;//can store 64 bytes
   reg [OPERAND_WIDTH-1:0] rB;//can store 64 bytes
 //  reg [NBYTES*8:0] wResult;//can store 64 bytes
-  reg [OPERAND_WIDTH:0] rResult;//can store 64 bytes
-  wire [OPERAND_WIDTH:0] wResult;//can store 64 bytes
+  reg [OPERAND_WIDTH+7:0] rResult;//can store 64 bytes
+  wire [OPERAND_WIDTH+7:0] wResult;//can store 64 bytes
+  reg [OPERAND_WIDTH+7:0] rFinal;
   reg [7:0] rByte;
   
   // State definition  
@@ -87,11 +88,12 @@ module uart_top #(
    .oRxDone(wRxDone)
   );    
   
- mp_adder MP_ADDER_INST
+ mp_adder #(  .OPERAND_WIDTH(OPERAND_WIDTH),.ADDER_WIDTH(ADDER_WIDTH) )
+ MP_ADDER_INST
  (
     .iClk(iClk),
     .iRst(iRst),
-    .iStart(wStart),
+    .iStart(rStart),
     .iOpA(rA),
     .iOpB(rB),
     .oRes(wResult),
@@ -112,6 +114,8 @@ module uart_top #(
       rBuffer <= 0;
       rA <= 0;
       rB <= 0;
+      rResult <= 0;
+      rFinal <= 0;
       end 
   else 
     begin
@@ -161,15 +165,16 @@ module uart_top #(
         
         s_CAL_START:
         begin
-           rStart = 1;
+           rStart <= 1;
            rFSM <= s_CAL;
         end
         
         s_CAL:
         begin
+            rResult <= wResult;
             rStart <= 0;
             if(wDone==1)begin
-              rResult <= wResult;
+              rFinal <= rResult;
               rFSM <= s_TX;
             end 
 
@@ -182,10 +187,9 @@ module uart_top #(
               begin
                 rFSM <= s_WAIT_TX;
                 rTxStart <= 1; 
-                //for mote bytes
-                rTxByte <= rResult[(NBYTES)*8-1:(NBYTES)*8-8];            // we send the uppermost byte
-                rResult <= {rResult[(NBYTES)*8-9:0] , 8'b0000_0000};    // we shift from right to left
-                //rTxByte <= rBuffer;//for single byte
+                //for more bytes
+                rTxByte <= rFinal[(NBYTES+1)*8-1:(NBYTES+1)*8-8];            // we send the uppermost byte
+                rFinal <= {rFinal[(NBYTES+1)*8-9:0] , 8'b0000_0000};    // we shift from right to left
                 rCnt <= rCnt + 1;
               end 
             else 

@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab3.srcs/sources_1/imports/new/full_adder.v" \
+"../../../../Lab3.srcs/sources_1/new/mp_adder.v" \
+"../../../../Lab3.srcs/sources_1/imports/new/ripple_carry_adder_Nb.v" \
+"../../../../Lab3.srcs/sources_1/new/uart_rx.v" \
+"../../../../Lab3.srcs/sources_1/new/uart_top.v" \
+"../../../../Lab3.srcs/sources_1/new/uart_tx.v" \
+"../../../../Lab3.srcs/sim_1/new/uart_top_adder_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,6 +1,9 @@
 Vivado Simulator 2020.1
 Time resolution is 1 ps
-342951248230122294549361859254880373000
-342951248230122294549361859254880373000
-Test Passed - Correct Addition
-$stop called at time : 480 ns : File "D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sim_1/new/mp_adder_TB.v" Line 68
+Now rBit is still smaller than NBYTES which is 0!
+Now rBit is still smaller than NBYTES which is 1!
+Reach the boundary
+Now rBit is still smaller than NBYTES which is 0!
+Now rBit is still smaller than NBYTES which is 1!
+Reach the boundary
+$stop called at time : 2790 ns : File "D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sim_1/new/uart_top_adder_TB.v" Line 65
