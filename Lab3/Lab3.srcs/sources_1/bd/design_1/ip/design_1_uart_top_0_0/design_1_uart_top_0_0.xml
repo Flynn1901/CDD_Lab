@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3017b26c</spirit:value>
+            <spirit:value>9:35e4a09a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -25,7 +25,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3017b26c</spirit:value>
+            <spirit:value>9:35e4a09a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -41,11 +41,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 19 21:07:45 UTC 2025</spirit:value>
+            <spirit:value>Thu Mar 20 10:16:42 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3017b26c</spirit:value>
+            <spirit:value>9:35e4a09a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -57,7 +57,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:08308fd9</spirit:value>
+            <spirit:value>9:78e5466f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -73,11 +73,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 19 21:07:45 UTC 2025</spirit:value>
+            <spirit:value>Thu Mar 20 10:16:42 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:08308fd9</spirit:value>
+            <spirit:value>9:78e5466f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -91,11 +91,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 19 21:08:26 UTC 2025</spirit:value>
+            <spirit:value>Thu Mar 20 10:17:35 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3017b26c</spirit:value>
+            <spirit:value>9:35e4a09a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -158,17 +158,17 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>OPERAND_WIDTH</spirit:name>
         <spirit:displayName>Operand Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.OPERAND_WIDTH">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.OPERAND_WIDTH">512</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>ADDER_WIDTH</spirit:name>
         <spirit:displayName>Adder Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ADDER_WIDTH">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ADDER_WIDTH">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>NBYTES</spirit:name>
         <spirit:displayName>Nbytes</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NBYTES" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.OPERAND_WIDTH&apos;)) / 8)">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NBYTES" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.OPERAND_WIDTH&apos;)) / 8)">64</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CLK_FREQ</spirit:name>
@@ -241,17 +241,17 @@
     <spirit:parameter>
       <spirit:name>OPERAND_WIDTH</spirit:name>
       <spirit:displayName>Operand Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OPERAND_WIDTH">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OPERAND_WIDTH">512</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDER_WIDTH</spirit:name>
       <spirit:displayName>Adder Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADDER_WIDTH">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADDER_WIDTH">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>NBYTES</spirit:name>
       <spirit:displayName>Nbytes</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NBYTES">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NBYTES">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLK_FREQ</spirit:name>

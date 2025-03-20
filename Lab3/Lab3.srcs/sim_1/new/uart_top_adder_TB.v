@@ -54,7 +54,7 @@ module tb_uart_top;
     send_operand(NBYTES, 8'hff);
     
     // Short pause between sending operand A and operand B
-    #(BIT_PERIOD * 2);
+    #(BIT_PERIOD * 100);
     
     // Send operand B: 4 bytes (example: 8'hAA)
     send_operand(NBYTES, 8'haa);

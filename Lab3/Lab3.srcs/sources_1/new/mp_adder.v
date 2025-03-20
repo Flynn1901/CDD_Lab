@@ -207,7 +207,6 @@ module mp_adder #(
                 muxB_sel = 1;
                 muxCarry_sel = 1;
                 wCnt_next = 0;
-                
                 wFSM_next = s_IDLE;
               end  
                 

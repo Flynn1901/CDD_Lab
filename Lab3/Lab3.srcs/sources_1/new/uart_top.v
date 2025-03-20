@@ -19,8 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module uart_top #(
-    parameter OPERAND_WIDTH   = 16,
-    parameter ADDER_WIDTH     = 8,
+    parameter OPERAND_WIDTH   = 512,
+    parameter ADDER_WIDTH     = 16,
     parameter   NBYTES        = OPERAND_WIDTH/8,
     // values for the UART (in case we want to change them)
     parameter   CLK_FREQ      = 125_000_000,
@@ -98,7 +98,7 @@ module uart_top #(
     .oRes(wResult),
     .oDone(wDone)
  );
-  reg [$clog2(NBYTES):0] rCnt;
+  reg [$clog2(NBYTES+2):0] rCnt;
 
   
   always @(posedge iClk)
@@ -174,8 +174,9 @@ module uart_top #(
             rResult <= wResult;
             rStart <= 0;
             if(wDone==1)begin
-              rFinal <= {7'b0000000,rResult};
+              rFinal <= {7'b0000000,wResult[OPERAND_WIDTH:0]};
               rFSM <= s_TX;
+              rCnt <= 0;
             end 
             else
                 rFSM <= s_CAL;

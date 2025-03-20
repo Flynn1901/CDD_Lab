@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Wed Mar 19 22:10:14 2025
+| Date             : Thu Mar 20 11:19:50 2025
 | Host             : DESKTOP-3T9PBIE running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.109        |
+| Total On-Chip Power (W)  | 0.126        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.003        |
+| Dynamic (W)              | 0.020        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 83.7         |
-| Junction Temperature (C) | 26.3         |
+| Max Ambient (C)          | 83.5         |
+| Junction Temperature (C) | 26.5         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      455 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      146 |     53200 |            0.27 |
-|   Register     |    <0.001 |      240 |    106400 |            0.23 |
+| Clocks         |     0.013 |        3 |       --- |             --- |
+| Slice Logic    |     0.004 |     6006 |       --- |             --- |
+|   LUT as Logic |     0.004 |     1686 |     53200 |            3.17 |
+|   Register     |    <0.001 |     3734 |    106400 |            3.51 |
 |   CARRY4       |    <0.001 |        8 |     13300 |            0.06 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |    <0.001 |      314 |       --- |             --- |
+| Signals        |     0.003 |     3866 |       --- |             --- |
 | I/O            |    <0.001 |        4 |       125 |            3.20 |
 | Static Power   |     0.106 |          |           |                 |
-| Total          |     0.109 |          |           |                 |
+| Total          |     0.126 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.003 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.028 |       0.020 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,10 +147,10 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| design_1_wrapper |     0.003 |
-|   design_1_i     |     0.003 |
-|     uart_top_0   |     0.002 |
-|       inst       |     0.002 |
+| design_1_wrapper |     0.020 |
+|   design_1_i     |     0.020 |
+|     uart_top_0   |     0.020 |
+|       inst       |     0.020 |
 +------------------+-----------+
 
 
