@@ -51,13 +51,13 @@ module tb_uart_top;
     #20;
     
     // Send operand A: 4 bytes (example: 8'h55)
-    send_operand(NBYTES, 8'h00);
+    send_operand(NBYTES, 8'hff);
     
     // Short pause between sending operand A and operand B
     #(BIT_PERIOD * 2);
     
     // Send operand B: 4 bytes (example: 8'hAA)
-    send_operand(NBYTES, 8'hAA);
+    send_operand(NBYTES, 8'haa);
     
     // Wait enough time for the adder to process and for UART TX to complete
     #1000;

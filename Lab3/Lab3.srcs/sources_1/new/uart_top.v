@@ -19,8 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module uart_top #(
-    parameter OPERAND_WIDTH   = 512,
-    parameter ADDER_WIDTH     = 16,
+    parameter OPERAND_WIDTH   = 16,
+    parameter ADDER_WIDTH     = 8,
     parameter   NBYTES        = OPERAND_WIDTH/8,
     // values for the UART (in case we want to change them)
     parameter   CLK_FREQ      = 125_000_000,
@@ -37,10 +37,9 @@ module uart_top #(
   reg [OPERAND_WIDTH-1:0] rA;//can store 64 bytes
   reg [OPERAND_WIDTH-1:0] rB;//can store 64 bytes
 //  reg [NBYTES*8:0] wResult;//can store 64 bytes
-  reg [OPERAND_WIDTH+7:0] rResult;//can store 64 bytes
-  wire [OPERAND_WIDTH+7:0] wResult;//can store 64 bytes
+  reg [OPERAND_WIDTH:0] rResult;//can store 64 bytes
+  wire [OPERAND_WIDTH:0] wResult;//can store 64 bytes
   reg [OPERAND_WIDTH+7:0] rFinal;
-  reg [7:0] rByte;
   
   // State definition  
   localparam s_IDLE         = 3'b000;
@@ -128,7 +127,7 @@ module uart_top #(
         if(rCnt<NBYTES)begin
             if(wRxDone==1)begin
                 $display("Now rBit is still smaller than NBYTES which is %h!", rCnt);
-                rBuffer <= {rBuffer[NBYTES*8-9:0], wRxByte};  // ? ֻ�� `wRxDone == 1` ʱд������
+                rBuffer <= {rBuffer[OPERAND_WIDTH-9:0], wRxByte};  // ? ֻ�� `wRxDone == 1` ʱд������
                 rCnt <= rCnt + 1;
                 rFSM <= s_RX1;
             end 
@@ -140,6 +139,7 @@ module uart_top #(
                 rA <= rBuffer;
                 rFSM <= s_RX2;
                 rCnt <= 0;
+                rBuffer <= 0;
         end
         end
         
@@ -148,7 +148,7 @@ module uart_top #(
         if(rCnt<NBYTES)begin
             if(wRxDone==1)begin
                 $display("Now rBit is still smaller than NBYTES which is %h!", rCnt);
-                rBuffer <= {rBuffer[NBYTES*8-9:0], wRxByte};  // ? ֻ�� `wRxDone == 1` ʱд������
+                rBuffer <= {rBuffer[OPERAND_WIDTH-9:0], wRxByte};  // ? ֻ�� `wRxDone == 1` ʱд������
                 rCnt <= rCnt + 1;
                 rFSM <= s_RX2;
             end 
@@ -174,10 +174,11 @@ module uart_top #(
             rResult <= wResult;
             rStart <= 0;
             if(wDone==1)begin
-              rFinal <= rResult;
+              rFinal <= {7'b0000000,rResult};
               rFSM <= s_TX;
             end 
-
+            else
+                rFSM <= s_CAL;
         end
 
              
@@ -188,8 +189,8 @@ module uart_top #(
                 rFSM <= s_WAIT_TX;
                 rTxStart <= 1; 
                 //for more bytes
-                rTxByte <= rFinal[(NBYTES+1)*8-1:(NBYTES+1)*8-8];            // we send the uppermost byte
-                rFinal <= {rFinal[(NBYTES+1)*8-9:0] , 8'b0000_0000};    // we shift from right to left
+                rTxByte <= rFinal[OPERAND_WIDTH+7:OPERAND_WIDTH];            // we send the uppermost byte
+                rFinal <= {rFinal[OPERAND_WIDTH-1:0] , 8'b0000_0000};    // we shift from right to left
                 rCnt <= rCnt + 1;
               end 
             else 
