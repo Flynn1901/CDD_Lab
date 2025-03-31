@@ -1,0 +1,251 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar 31 09:03:08 2025
+# Process ID: 4868
+# Current directory: D:/PROJECT/XILINX/CDD/Lab3/Lab3.runs/synth_1
+# Command line: vivado.exe -log mp_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mp_adder.tcl
+# Log file: D:/PROJECT/XILINX/CDD/Lab3/Lab3.runs/synth_1/mp_adder.vds
+# Journal file: D:/PROJECT/XILINX/CDD/Lab3/Lab3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mp_adder.tcl -notrace
+Command: synth_design -top mp_adder -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4872
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mp_adder' [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sources_1/new/mp_adder.v:3]
+	Parameter OPERAND_WIDTH bound to: 512 - type: integer 
+	Parameter ADDER_WIDTH bound to: 32 - type: integer 
+	Parameter N_ITERATIONS bound to: 16 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_STORE_OPS bound to: 3'b001 
+	Parameter s_ADD_FIRST bound to: 3'b010 
+	Parameter s_ADD_WORDS bound to: 3'b011 
+	Parameter s_DONE bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'ripple_carry_adder_Nb' [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sources_1/imports/new/ripple_carry_adder_Nb.v:23]
+	Parameter ADDER_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sources_1/imports/new/full_adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (1#1) [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sources_1/imports/new/full_adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ripple_carry_adder_Nb' (2#1) [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sources_1/imports/new/ripple_carry_adder_Nb.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mp_adder' (3#1) [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/sources_1/new/mp_adder.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1013.434 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'iRx'. [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'oTx'. [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/PROJECT/XILINX/CDD/Lab3/Lab3.srcs/constrs_1/new/PYNQ-Z2v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mp_adder_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mp_adder_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1013.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'rFSM_current_reg' in module 'mp_adder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_IDLE |                              000 |                              000
+             s_STORE_OPS |                              001 |                              001
+             s_ADD_FIRST |                              010 |                              010
+             s_ADD_WORDS |                              011 |                              011
+                  s_DONE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rFSM_current_reg' using encoding 'sequential' in module 'mp_adder'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 64    
++---Registers : 
+	              512 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1013.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |    10|
+|3     |LUT3 |    15|
+|4     |LUT4 |    84|
+|5     |LUT5 |  1013|
+|6     |LUT6 |    14|
+|7     |FDRE |  1571|
+|8     |IBUF |  1027|
+|9     |OBUF |   514|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1146.027 ; gain = 132.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1146.027 ; gain = 132.594
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1146.027 ; gain = 0.000
+WARNING: [Netlist 29-101] Netlist 'mp_adder' is not ideal for floorplanning, since the cellview 'mp_adder' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1146.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1146.027 ; gain = 132.594
+INFO: [Common 17-1381] The checkpoint 'D:/PROJECT/XILINX/CDD/Lab3/Lab3.runs/synth_1/mp_adder.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mp_adder_utilization_synth.rpt -pb mp_adder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 31 09:03:52 2025...
